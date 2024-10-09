@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+<style> @font-face {font-family: "SimHei"; src: url(./fonts/simhei.ttf);} </style>
+<style> body {font-family: "SimHei";} </style>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>raw_doc</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<pre><code>title: &quot;WRFChem Ensemble CO&lt;sub&gt;2&lt;/sub&gt;&quot;
+author: &quot;周旭&quot;
+institude: &quot;中国科学院大气物理研究所&quot;
+short_title: null
+short_author: null
+short_institude: null
+other_char1: &quot;1234567890&quot;
+other_char2: &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;
+other_char3: &quot;!@#$%^&amp;*()_+~`-=[]{};&#39;:\&quot;,./&lt;&gt;?\\|&quot;</code></pre>
+<h1 id="wrfchem-ensemble-co2">WRFChem Ensemble CO<sub>2</sub></h1>
+<h2 id="模式介绍">模式介绍</h2>
+<h3 id="目前-wrfchem-模式mathrmco_2方案">目前 WRFChem 模式<span
+class="math inline">CO<sub>2</sub></span>方案</h3>
+<ul>
+<li>主要模式过程分为排放处理和大气传输两部分，并未考虑<span
+class="math inline">CO<sub>2</sub></span>的化学反应</li>
+<li>计算得到的<span
+class="math inline">CO<sub>2</sub></span>不会影响大气物理化学性质，也不会影响传输过程</li>
+<li>对于不同的排放/通量的处理过程是一致的（区别仅在于变量名）</li>
+</ul>
+<figure>
+<img src="./images/wrfchem_co2.png" alt="wrfchem_co2" />
+<figcaption aria-hidden="true">wrfchem_co2</figcaption>
+</figure>
+<h3 id="现有-wrfchem-模式的问题">现有 WRFChem 模式的问题</h3>
+<ol type="1">
+<li><strong>集合模拟需求：</strong></li>
+</ol>
+<ul>
+<li>运行多个集合，重复的气象过程计算导致了大量计算资源的浪费</li>
+<li>在集合计算中仅需要CO2_ANT一个变量，其他变量是不必要的</li>
+<li>对于多种不同情景，例如区分某个城市的增量，需要重复计算气象过程</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>模式计算BUG：</strong></li>
+</ol>
+<ul>
+<li>在WRF-Chem开发者的认知中，目前模式中气体浓度为干空气摩尔分数</li>
+<li>模式传输计算中前后<span
+class="math inline">CO<sub>2</sub></span>基本守恒（也就是使用的干空气质量）</li>
+<li>模式通量计算中使用的空气质量为湿空气质量</li>
+<li>可能会导致通量计算的浓度增量存在约0.5%的误差（包括人为、自然）</li>
+<li>参考：<a
+href="%22https://forum.mmm.ucar.edu/threads/rho_phy-and-unit-of-tracers-into-wrf-atmosphere.9395/#:~:text=I&#39;m%20using%20WRF%20to%20compute%20transport%20of%20passive%20greenhouse%20gas%22">rho_phy
+and unit of tracers into WRF atmosphere</a></li>
+</ul>
+<h2 id="运行测试">运行测试</h2>
+<h3 id="wrfchem-集合mathrmco_2模拟方案">WRFChem 集合<span
+class="math inline">CO<sub>2</sub></span>模拟方案</h3>
+<ul>
+<li>增加了10个参数化方案，可分别模拟10-100个集合<span
+class="math inline">CO<sub>2</sub></span></li>
+<li>增加了控制排放计算使用干湿空气的选项</li>
+<li>这些方案中不计算VPRM以及其他自然碳通量，全部依赖输入通量清单</li>
+</ul>
+<figure>
+<img src="./images/wrfchem_en_co2.png" alt="wrfchem_en_co2" />
+<figcaption aria-hidden="true">wrfchem_en_co2</figcaption>
+</figure>
+<h3 id="测试方案设计">测试方案设计</h3>
+<ul>
+<li><strong>网格设定</strong>
+<ul>
+<li>网格大小：105×105×44</li>
+<li>网格距：9km</li>
+<li>模拟区域：中国东南福建省周边</li>
+</ul></li>
+<li><strong>运行设定</strong>
+<ul>
+<li>气象、化学时间积分步长：36s</li>
+<li>运行时间：18h</li>
+<li>从重启文件开始运行</li>
+</ul></li>
+<li><strong>计算资源</strong>
+<ul>
+<li>大装置单节点64核心</li>
+</ul></li>
+<li><strong>对照 WRFChem <span class="math inline">CO<sub>2</sub></span>
+设置</strong>：
+<ul>
+<li>基本设置一致，关闭VPRM计算</li>
+</ul></li>
+</ul>
+<h3 id="运行效率评估">运行效率评估</h3>
+<ul>
+<li>随着集合数目增加，运算耗时（包括IO和化学积分）线性增加</li>
+<li>原始 WRFChem 的<span
+class="math inline">CO<sub>2</sub></span>耗时约为10集合成员时的0.8倍</li>
+<li>适当增加化学时间积分步长可以减少运算时间（三清使用5m，为当前8.33倍）</li>
+</ul>
+<figure>
+<img src="./images/time_compare.png" alt="time_compare" />
+<figcaption aria-hidden="true">time_compare</figcaption>
+</figure>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<mxfile host="Electron" modified="2024-10-06T06:29:27.192Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" version="22.1.2" etag="HcmQE4a41_58aG2hCpii" type="device">
+  <diagram id="5IEIbPWV9oZbmpcRLM0d" name="第 1 页">
+    <mxGraphModel dx="275" dy="68" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="600" pageHeight="450" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="通量清单" tags="box" id="10">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fillColor=#981e32;fontColor=#FFFFFF;opacity=90;gradientColor=none;rounded=1;swimlaneLine=1;glass=0;shadow=0;" parent="1" vertex="1">
+            <mxGeometry x="610" y="460" width="100" height="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="集合成员1&lt;br&gt;ECO2_00" tags="rec" id="2">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" parent="10" vertex="1">
+            <mxGeometry x="10" y="30" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="集合成员2&lt;br&gt;ECO2_01" tags="rec" id="5">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" parent="10" vertex="1">
+            <mxGeometry x="10" y="80" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-45" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;fontFamily=微软雅黑;" edge="1" parent="10">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="160" as="sourcePoint" />
+            <mxPoint x="50" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="集合成员100&lt;br&gt;ECO2_99" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-28">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="10">
+            <mxGeometry x="10" y="170" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="模拟浓度" tags="box" id="zu2IzMYw4tfVBAfS5yUT-30">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fillColor=#981e32;fontColor=#FFFFFF;opacity=90;gradientColor=none;rounded=1;swimlaneLine=1;glass=0;shadow=0;" vertex="1" parent="1">
+            <mxGeometry x="740" y="460" width="100" height="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="浓度贡献1&lt;br&gt;CO2_00" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-31">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-30">
+            <mxGeometry x="10" y="30" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="浓度贡献2&lt;br&gt;CO2_01" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-32">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-30">
+            <mxGeometry x="10" y="80" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-46" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;fontFamily=微软雅黑;" edge="1" parent="zu2IzMYw4tfVBAfS5yUT-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="49.65999999999997" y="160" as="sourcePoint" />
+            <mxPoint x="49.65999999999997" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="浓度贡献100&lt;br&gt;CO2_99" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-33">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-30">
+            <mxGeometry x="10" y="170" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="初边界条件" tags="box" id="zu2IzMYw4tfVBAfS5yUT-34">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fillColor=#981e32;fontColor=#FFFFFF;opacity=90;gradientColor=none;rounded=1;swimlaneLine=1;glass=0;shadow=0;" vertex="1" parent="1">
+            <mxGeometry x="870" y="460" width="100" height="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="集合成员1&lt;br&gt;CO2_01" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-35">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-34">
+            <mxGeometry x="10" y="30" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="集合成员2&lt;br&gt;CO2_01" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-36">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-34">
+            <mxGeometry x="10" y="80" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="集合成员100&lt;br&gt;CO2_99" tags="rec" id="zu2IzMYw4tfVBAfS5yUT-37">
+          <mxCell style="rounded=0;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fontStyle=0" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-34">
+            <mxGeometry x="10" y="170" width="80" height="40" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-47" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;fontFamily=微软雅黑;" edge="1" parent="zu2IzMYw4tfVBAfS5yUT-34">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="49.66000000000004" y="160" as="sourcePoint" />
+            <mxPoint x="49.66000000000004" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="2" target="zu2IzMYw4tfVBAfS5yUT-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="5" target="zu2IzMYw4tfVBAfS5yUT-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="zu2IzMYw4tfVBAfS5yUT-35" target="zu2IzMYw4tfVBAfS5yUT-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="zu2IzMYw4tfVBAfS5yUT-36" target="zu2IzMYw4tfVBAfS5yUT-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="zu2IzMYw4tfVBAfS5yUT-28" target="zu2IzMYw4tfVBAfS5yUT-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontFamily=微软雅黑;" edge="1" parent="1" source="zu2IzMYw4tfVBAfS5yUT-37" target="zu2IzMYw4tfVBAfS5yUT-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="参数化方案" tags="box" id="zu2IzMYw4tfVBAfS5yUT-62">
+          <mxCell style="swimlane;whiteSpace=wrap;html=1;fontFamily=微软雅黑;fillColor=#981e32;fontColor=#FFFFFF;opacity=90;gradientColor=none;rounded=1;swimlaneLine=1;glass=0;shadow=0;swimlaneFillColor=#FFFFFF;" vertex="1" parent="1">
+            <mxGeometry x="990" y="460" width="190" height="220" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="zu2IzMYw4tfVBAfS5yUT-68" value="&lt;p style=&quot;line-height: 130%; font-size: 10px;&quot;&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;chem_opt:&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;span style=&quot;background-color: initial;&quot;&gt;720: 100 个集合成员&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;span style=&quot;background-color: initial;&quot;&gt;721: 10 个集合成员&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;span style=&quot;background-color: initial;&quot;&gt;722: 20 个集合成员&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;span style=&quot;background-color: initial;&quot;&gt;729: 90 个集合成员&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;emiss_opt:&lt;/b&gt; 720 - 729&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;gas_ic_opt:&lt;/b&gt; 720，380ppmv&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;gas_bc_opt:&lt;/b&gt; 720，380ppmv&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;have_gas_bdy:&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;span style=&quot;background-color: initial;&quot;&gt;.true.: 使用wrfinput和wrfbdy输入&lt;/span&gt;&lt;br&gt;&amp;nbsp; ◼ &lt;font style=&quot;font-size: 10px;&quot;&gt;.false.: 使用默认值380（默认）&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px;&quot;&gt;&lt;b&gt;emiss_dry_air_mass:&lt;/b&gt;&lt;br&gt;&lt;/font&gt;&amp;nbsp; ◼ &lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;.true.: 使用干空气计算排放&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp; ◼ &lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;.false.: 使用湿空气计算排放（默认）&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" style="text;align=left;verticalAlign=middle;spacingLeft=0;spacingRight=0;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;html=1;spacing=0;rounded=0;glass=0;shadow=0;imageWidth=24;labelPadding=0;noLabel=0;autosize=0;fixedWidth=0;fontFamily=微软雅黑;fillColor=none;" vertex="1" parent="zu2IzMYw4tfVBAfS5yUT-62">
+          <mxGeometry x="10" y="20" width="170" height="200" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -16,7 +16,8 @@ class DocInfo {
         short_author    = null,
         short_institude = null,
         logo            = null,
-        thanks          = null} = {}
+        thanks          = null,
+        theme_color     = null,} = {}
     ) {
         this.title = title;
         this.short_title = short_title || this.title;
@@ -26,12 +27,40 @@ class DocInfo {
         this.short_institude = short_institude || this.institude;
         this.logo = logo;
         this.thanks = thanks;
+        this.theme_color = theme_color || this.get_theme_color();
+        if (theme_color) {
+            this.set_theme_color();
+        }
         if (! date) {
             let objectDate = new Date();
             this.date = `${objectDate.getFullYear()} 年 ${objectDate.getMonth() + 1} 月 ${objectDate.getDate()} 日`;
         } else {
             this.date = date;
         }
+    }
+
+    get_theme_color() {
+        let css_rules, css_file, css_rule, theme_color
+        for (css_file of document.styleSheets) {
+            if (css_file.href){
+                if (css_file.href.indexOf("theme_zx") >= 0) {
+                    css_rules = css_file.cssRules;
+                }
+            }
+        }
+        for (css_rule of css_rules) {
+            if (css_rule.cssText.indexOf("--main-theme-color:") >= 0) {
+                theme_color = /(?<=--main-theme-color: *)[^; ]*(?=;)/.exec(css_rule.cssText)[0];
+            }
+        }
+        return theme_color
+    }
+
+    set_theme_color(theme_color=null) {
+        theme_color = theme_color || this.theme_color;
+        let theme_style = document.createElement("style");
+        theme_style.textContent = `:root {--main-theme-color: ${theme_color};}`;
+        document.head.appendChild(theme_style)
     }
 
     create_titlepage(title=null, author=null, institude=null, date=null, logo=null) {

@@ -58,7 +58,6 @@ other_char3: "!@#$%^&*()_+~`-=[]{};':\",./<>?\\|"
 * **GitHub 支持限定词（限定仓库、语言、路径、内容等）、正则表达式与布尔运算符构建搜索请求**
 * **优点**：搜索功能强大，搜索速度快，全部可以线上完成，不需要下载源代码，可以看到搜索结果上下文
 * **缺点**：仅可检索源代码，无法检索编译过程中自动生成的内容
-* 参考：<a href="https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax" target="_blank">Understanding GitHub Code Search syntax - GitHub Docs</a>
 
 ![github_search](./images/github_search.jpg)
 

@@ -197,27 +197,23 @@ class="math inline">CO<sub>2</sub></span>不会影响大气物理化学性质，
 </figure>
 <h3 id="现有-wrfchem-模式的问题">现有 WRFChem 模式的问题</h3>
 <ol type="1">
-<li><strong>集合模拟需求：</strong></li>
-</ol>
+<li><strong>集合模拟需求：</strong>
 <ul>
 <li>运行多个集合，重复的气象过程计算导致了大量计算资源的浪费</li>
 <li>在集合计算中仅需要CO2_ANT一个变量，其他变量是不必要的</li>
 <li>对于多种不同情景，例如区分某个城市的增量，需要重复计算气象过程</li>
-</ul>
-<ol start="2" type="1">
-<li><strong>模式计算BUG：</strong></li>
-</ol>
+</ul></li>
+<li><strong>模式计算BUG：</strong>
 <ul>
 <li>在WRF-Chem开发者的认知中，目前模式中气体浓度为干空气摩尔分数</li>
 <li>模式传输计算中前后<span
 class="math inline">CO<sub>2</sub></span>基本守恒（也就是使用的干空气质量）</li>
 <li>模式通量计算中使用的空气质量为湿空气质量</li>
 <li>可能会导致通量计算的浓度增量存在约0.5%的误差（包括人为、自然）</li>
-<li>参考：<a
-href="%22https://forum.mmm.ucar.edu/threads/rho_phy-and-unit-of-tracers-into-wrf-atmosphere.9395/#:~:text=I&#39;m%20using%20WRF%20to%20compute%20transport%20of%20passive%20greenhouse%20gas%22">rho_phy
+<li>参考：<a href="https://forum.mmm.ucar.edu/threads/rho_phy-and-unit-of-tracers-into-wrf-atmosphere.9395/#:~:text=I'm%20using%20WRF%20to%20compute%20transport%20of%20passive%20greenhouse%20gas" target="_blank">rho_phy
 and unit of tracers into WRF atmosphere</a></li>
-</ul>
-<h2 id="运行测试">运行测试</h2>
+</ul></li>
+</ol>
 <h3 id="wrfchem-集合mathrmco_2模拟方案">WRFChem 集合<span
 class="math inline">CO<sub>2</sub></span>模拟方案</h3>
 <ul>
@@ -230,6 +226,68 @@ class="math inline">CO<sub>2</sub></span></li>
 <img src="./images/wrfchem_en_co2.png" alt="wrfchem_en_co2" />
 <figcaption aria-hidden="true">wrfchem_en_co2</figcaption>
 </figure>
+<h2 id="模式修改">模式修改</h2>
+<h3 id="wrf-模式修改与代码生成">WRF 模式修改与代码生成</h3>
+<ol type="1">
+<li><strong>修改注册表（Registry），并自动生成相关代码</strong>
+<ul>
+<li>例如数组内存申请、输入输出等代码，在WRF中都是在注册表中写入，然后编译时自动生成相关代码</li>
+<li>一般来说修改注册表即可，关于注册表的说明见《WRF使用指南》第8章</li>
+</ul></li>
+<li><strong>修改 Fortran *.F 源代码，编译时生成 *.F90</strong>
+<ul>
+<li>主要用于实现模式的主要逻辑，可以直接调用 namelist
+选项和注册表中定义的变量</li>
+</ul></li>
+</ol>
+<h3 id="辅助工具github搜索">辅助工具——GitHub搜索</h3>
+<ul>
+<li><strong>GitHub
+支持限定词（限定仓库、语言、路径、内容等）、正则表达式与布尔运算符构建搜索请求</strong></li>
+<li><strong>优点</strong>：搜索功能强大，搜索速度快，全部可以线上完成，不需要下载源代码，可以看到搜索结果上下文</li>
+<li><strong>缺点</strong>：仅可检索源代码，无法检索编译过程中自动生成的内容</li>
+<li>参考：<a href="https://docs.github.com/en/search-github/github-code-search/understanding-github-code-search-syntax">Understanding
+GitHub Code Search syntax - GitHub Docs</a></li>
+</ul>
+<figure>
+<img src="./images/github_search.jpg" alt="github_search" />
+<figcaption aria-hidden="true">github_search</figcaption>
+</figure>
+<h3 id="辅助工具linux-grep-命令">辅助工具——Linux grep 命令</h3>
+<ul>
+<li><code>grep -inHr "&lt;str&gt;" &lt;files&gt;</code>：显示文件、行号，忽略大小写，遍历子目录</li>
+<li><strong>优点</strong>：对本地文件进行检索，可以搜索编译后结果</li>
+<li><strong>缺点</strong>：搜索速度较慢，无法看到搜索结果附近代码</li>
+</ul>
+<figure>
+<img src="./images/grep_search.jpg" alt="grep_search" />
+<figcaption aria-hidden="true">grep_search</figcaption>
+</figure>
+<h3 id="辅助工具fprettify">辅助工具——fprettify</h3>
+<ul>
+<li>格式化 Fortran 代码，用于应对编写格式混乱的问题</li>
+<li>优点：修改后的代码可阅读性更强，安装简单，可以通过 pip 或 conda
+安装</li>
+<li>缺点：可能会有bug，另外不建议用格式化后的代码编译</li>
+<li>参考：<a href="https://github.com/fortran-lang/fprettify">fprettify:
+auto-formatter for modern fortran source code</a></li>
+</ul>
+<figure>
+<img src="./images/fprettify.jpg" alt="fprettify" />
+<figcaption aria-hidden="true">fprettify</figcaption>
+</figure>
+<h3 id="主要修改流程">主要修改流程</h3>
+<ol type="1">
+<li>寻找现有的类似的参数化方案，检索相关的关键字（包括但不限于 namelist
+选项、注册表变量以及相应值、子程序定义与调用、日志信息等），找出所有可能需要修改的文件和位置</li>
+<li>阅读包含需要修改的内容所在的子程序的逻辑，了解其用途，如果看不懂则可以往上找</li>
+<li>对于 WRFChem
+的化学物种，一般只需要考虑初始化、默认边界条件设置、排放文件读取以及具体的化学过程，物理传输过程由
+Chem 统一实现，不需要自行编写代码</li>
+<li>编译修改后的源代码，根据报错debug，一般来说出错不需要clean，直接重新编译即可</li>
+<li>运行新编译模式程序，检查输出结果是否符合预期</li>
+</ol>
+<h2 id="运行测试">运行测试</h2>
 <h3 id="测试方案设计">测试方案设计</h3>
 <ul>
 <li><strong>网格设定</strong>

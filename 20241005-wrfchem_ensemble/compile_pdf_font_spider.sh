@@ -8,4 +8,4 @@ sed -i '/<head>/a<style> body {font-family: "SimHei";} </style>' ./raw_doc.html
 sed -i '/<head>/a<style> @font-face {font-family: "SimHei"; src: url(./fonts/simhei.ttf);} </style>' ./raw_doc.html
 font-spider --no-backup ./raw_doc.html
 # must open a new child process, or decktape will report TimeoutError
-(decktape ./index_with_font.html $(date +%Y%m%d-%H%M%S)-output.pdf)
+(decktape --slides 2-999 ./index_with_font.html $(date +%Y%m%d-%H%M%S)-output.pdf)

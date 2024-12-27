@@ -1,0 +1,316 @@
+/* 变量定义 */
+:root {
+    --main-theme-color: #981E32;
+    --line-height: 1.2;
+    --line-spacing: 1.2;
+    --p-margin-top: 0.2em;
+    --h-margin-bottom: 0.5em;
+    --content-width: 95%;
+    --base-font-size: 50px;
+}
+
+body {
+    background: #fff;
+    background-color: #fff;
+}
+
+/* @font-face {
+    font-family: "SimHei";
+    src: url(../../fonts/simhei.ttf);
+} */
+
+/* 基础设定 */
+.reveal {
+    font-family: "SimHei", "Source Sans Pro", Helvetica, sans-serif;
+    /* font-family: Helvetica, sans-serif; */
+    font-size: var(--base-font-size);
+    font-weight: normal;
+    color: #222;
+}
+
+/* 选中设定 */
+::selection, ::-moz-selection {
+    color: #fff;
+    background: var(--main-theme-color);
+    text-shadow: none;
+}
+
+.reveal .slides section {
+    line-height: var(--line-height);
+    font-weight: inherit;
+    width: 100%;
+    height: 100%;
+    display: block flex !important;
+    flex-direction: column;
+}
+
+.reveal .slides header {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5% 2%;
+    font-size: 0.4em;
+    font-weight: bold;
+    letter-spacing: 0.07em;
+    line-height: 1.1;
+    color: var(--main-theme-color);
+}
+
+.reveal .slides header div.header_content {
+    flex: 0 1 auto;
+    margin: 0;
+    text-align: left;
+}
+
+.reveal .slides header div.header_content svg {
+    height: 0.7em;
+    width: 0.7em;
+    padding: 0;
+    margin: 0 0 0 0.15em;
+}
+
+#this_page circle {
+    fill: var(--main-theme-color);
+    stroke: var(--main-theme-color);
+}
+
+#other_page circle {
+    fill: none;
+    stroke: var(--main-theme-color);
+}
+
+.reveal .slides header div.header_content a {
+    color: var(--main-theme-color);
+}
+
+.reveal .slides header div.header_content a:nth-of-type(2) svg {
+    margin: 0 0 0 0.15em;
+}
+
+.reveal .slides header div.header_padding {
+    flex: 1 1 auto;
+}
+
+/* content中多列环境columns */
+.reveal .slides div.columns {
+    margin: 0.5em 0;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* columns中各列column */
+.reveal .slides div.columns div.column {
+    margin: 0.5em;
+    flex: 1 1 auto;
+}
+
+.reveal .slides footer {
+    padding: 0.5% 2%;
+    font-size: 0.4em;
+    font-weight: bold;
+    line-height: 1.4;
+    display: flex;
+    color: var(--main-theme-color);
+    background-color: #f8f8f8;
+}
+
+.reveal .slides footer a {
+    color: var(--main-theme-color);
+}
+
+.reveal ol,
+.reveal dl,
+.reveal ul {
+    text-align: left;
+    margin: 0 0 0 1em;
+}
+
+/* 无序列表标记符号 */
+.reveal ul {
+    /* https://tool.lmeee.com/fuhao/fangkuai */
+    list-style: "◼ ";
+    list-style-position: outside;
+}
+
+/* 列表标记颜色 */
+li::marker {
+    color: var(--main-theme-color);
+}
+
+/* 列表排版 */
+.reveal .slides li {
+    line-height: var(--line-height);
+    margin: var(--p-margin-top) 0 0 0;
+}
+
+/* 列表段落排版 */
+.reveal li p {
+    line-height: var(--line-height);
+    margin: var(--p-margin-top) 0px 0px 0px;
+}
+
+.reveal .slides section ol.TOC li {
+    margin: 0 0 1em 2em;
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--main-theme-color);
+}
+
+.reveal .slides section ol.TOC li a {
+    color: var(--main-theme-color);
+}
+
+/* 强调设置 */
+.reveal .slides section .fragment.highlight-red.visible {
+    font-weight: bold;
+    color: var(--main-theme-color);
+}
+
+/* 段落设定 */
+.reveal p {
+    margin: var(--p-margin-top) 0;
+    line-height: var(--line-height);
+    text-align: left;
+}
+
+.reveal p:has(img) {
+    text-align: center;
+}
+
+/* 标题设置 */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+    margin: 0.5% 2%;
+    top: 0;
+    left: 0;
+    color: var(--main-theme-color);
+    /* font-family: "Source Sans Pro", Helvetica, sans-serif; */
+    font-weight: bold;
+    line-height: var(--line-height);
+    letter-spacing: normal;
+    text-align: left;
+    text-shadow: none;
+    word-wrap: break-word;
+    flex: 0 1 auto;
+}
+
+/* h1 is used on the title slide. */
+.reveal h1 {
+    font-size: 2.2em;
+    text-align: center;
+}
+
+/* h2 is used for sections that appear in the TOC. */
+.reveal h2 {
+    font-size: 2.2em;
+    text-align: center;
+    flex: 1 1 auto;
+    justify-content: center;
+}
+
+.reveal h3 {
+    font-size: 1.3em;
+}
+
+.reveal h4 {
+    font-size: 1.0em;
+}
+
+.reveal img {
+    margin: 5px 5px;
+}
+
+.reveal .imgcontainer,
+.reveal figure,
+.reveal div.figure,
+.reveal svg {
+    position: relative;
+    padding-right: 2vw;
+    text-align: center;
+}
+
+.reveal .imgcontainer figure,
+.reveal .imgcontainer div.figure {
+    margin: 3px 5px;
+    display: inline-block;
+}
+
+/* Org creates caption as sibling, I as second child. */
+.reveal div.figure+p,
+.reveal div.figure p:nth-child(2),
+.reveal figcaption {
+    margin: 0;
+    font-size: .5em;
+    line-height: 1.0;
+    color: rgba(34, 34, 34, 0.3);
+}
+
+/* Ensure certain elements are never larger than the slide itself */
+.reveal img,
+.reveal div.figure,
+.reveal figure,
+.reveal object,
+.reveal svg,
+.reveal video,
+.reveal iframe {
+    max-width: 90%;
+    max-height: 25ex;
+}
+
+/* center videos */
+.reveal video {
+    display: block;
+    margin: 1ex auto;
+}
+
+.reveal strong,
+.reveal b {
+    font-weight: bold;
+    color: var(--main-theme-color);
+}
+
+
+.reveal sup {
+    vertical-align: super;
+    font-size: 70%;
+    line-height: 0;
+}
+  
+.reveal sub {
+    vertical-align: sub;
+    font-size: 70%;
+    line-height: 0;
+}
+
+.reveal small {
+    display: inline-block;
+    font-size: 0.6em;
+    line-height: 1.2em;
+    vertical-align: top;
+}
+
+.reveal a {
+    text-decoration: none;
+}
+
+/* for markdown */
+.reveal .slides section>:not(header, footer, h1, h2, h3, h4, h5, h6, section) {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.reveal .slides section .content_padding {
+    flex: 1 1 auto;
+}
+
+.reveal .slides section span.katex {
+    margin: 0%;
+    line-height: 1;
+    font-size: 0.95em;
+}
